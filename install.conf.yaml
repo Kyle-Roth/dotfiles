@@ -3,8 +3,6 @@
       create: true
       relink: true
       force: false
-    create:
-      mode: 755 
 
 - clean: ['~']
 
@@ -21,5 +19,6 @@
     - ~/.zsh
 
 - shell:
+    - command: chmod 755 ~/.vim/undo-dir ~/.zsh
     - [git submodule update --init --recursive, installing submodules]
 
