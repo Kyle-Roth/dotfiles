@@ -8,6 +8,9 @@ alias ls='ls --color=auto'
 alias ll='ls -al'
 alias la='ls -a'
 
+# Docker Alias
+alias dcp='docker compose --env-file ~/docker/.env -f ~/docker/docker-compose.yml'
+
 # ZSH tab completion system
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 zstyle :compinstall filename 'Users/kyleroth/.zshrc'
