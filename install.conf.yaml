@@ -1,0 +1,22 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: false
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc: zshrc
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.config/karabiner/karabiner.json:
+      if: '[ "$(uname)" = Darwin ]'
+      path: karabiner/karabiner.json
+
+- create:
+    - ~/.vim/undo-dir
+
+- shell:
+    - [git submodule update --init --recursive, installing submodules]
+

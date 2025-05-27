@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/kyleroth/Documents/codjo/wedding_website/public/assets/js'
+let g:netrw_dirhist_3='/Users/kyleroth/Documents/codjo/skytrax/libs/newton'
+let g:netrw_dirhist_2='/Users/kyleroth/Documents/codjo/skytrax/cmd_app'
+let g:netrw_dirhist_1='/Users/kyleroth/Documents/codjo/tex/resources'
