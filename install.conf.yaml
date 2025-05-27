@@ -16,6 +16,7 @@
 
 - create:
     - ~/.vim/undo-dir
+    - ~/.zsh/
 
 - shell:
     - [git submodule update --init --recursive, installing submodules]
