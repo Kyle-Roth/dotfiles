@@ -1,0 +1,3 @@
+# Always check out with LF line endings, even on Windows,
+# so shell scripts and config files keep working everywhere.
+* text=auto eol=lf

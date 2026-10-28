@@ -1,4 +1,10 @@
-
-
-vim/plugged/
+# Vim per-machine files (now stored outside the repo, ignored just in case)
+*.un~
+*.swp
+*.swo
+.netrwhist
 vim/undo-dir/
+vim/plugged/
+
+# macOS
+.DS_Store
