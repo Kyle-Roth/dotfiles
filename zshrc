@@ -1,6 +1,8 @@
 # ZSH prompt setup
-PROMPT='%B%F{202}%2~%b%f %(!,>>,>) '
+#PROMPT='%B%F{202}%2~%b%f %(!,>>,>) '
 #export PS1='%B%F{202}%2~%b%f %(!,>>,>) '
+# setting zsh theme
+eval "$(starship init zsh)"
 
 # ALIASs for use in terminal
 alias cdp='cd ~/Documents/codjo'
@@ -12,11 +14,11 @@ alias la='ls -a'
 alias dcp='docker compose --env-file ~/docker/.env -f ~/docker/docker-compose.yml'
 
 # ZSH tab completion system
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
-zstyle :compinstall filename 'Users/kyleroth/.zshrc'
+#zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
+#zstyle :compinstall filename 'Users/kyleroth/.zshrc'
 
-autoload -Uz compinit
-compinit
+#autoload -Uz compinit
+#compinit
 # End of lines for CompInstall
 
 # CMD line history stuff
@@ -34,19 +36,9 @@ setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history
 setopt SHARE_HISTORY             # Share history between all sessions.
 # end HISTORY
 
-# Load the Zsh functions for smarter up/down history search
-autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
-
-# Make them available as ZLE (Zsh Line Editor) widgets
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-
-# Bind the up arrow to search backward through history 
-# for commands that match the current typed prefix
-bindkey "^[[A" up-line-or-beginning-search   # Up arrow key
-
-# Bind the down arrow to search forward through matching history
-bindkey "^[[B" down-line-or-beginning-search # Down arrow key
+# smarter command search with arrow keys
+bindkey "^[[A" history-search-backward # Up arrow key
+bindkey "^[[B" history-search-forward # Down arrow key
 
 # setting ls colors
 export LS_COLOR="$(vivid generate ayu)"

@@ -9,6 +9,7 @@ syntax on               " Turn syntax highlighting on.
 " Highlight cursor line underneath the cursor horizontally.
 set cursorline
 set nowrap
+set linebreak
 
 " Basic usability enhancements.
 set showmatch           " Show matching brackets when cursor is on them.
@@ -56,7 +57,7 @@ call plug#end()
 
 " Set color scheme
 set termguicolors     " Enable true color support.
-let ayucolor="light"  " Use the light version of the Ayu theme.
+let ayucolor="mirage"  " Use the light version of the Ayu theme.
 silent! colorscheme ayu
 
 " Force transparent background

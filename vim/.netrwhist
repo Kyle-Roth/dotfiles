@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/kyleroth/Documents/codjo/kyleroth.dev/public/cookbook/assets'
+let g:netrw_dirhist_3='/Users/kyleroth/Documents/codjo/kyleroth.dev/public/cookbook/recipes/BlueberryCheesecake'
+let g:netrw_dirhist_2='/Users/kyleroth/Documents/codjo/kyleroth.dev/public/cookbook/recipes/_template'
+let g:netrw_dirhist_1='/Users/kyleroth/Documents/resume'
