@@ -10,15 +10,21 @@
     ~/.zshrc: zshrc
     ~/.vim: vim
     ~/.vimrc: vimrc
+    ~/.config/starship.toml: starship
     ~/.config/karabiner/karabiner.json:
       if: '[ "$(uname)" = Darwin ]'
-      path: karabiner/karabiner.json
+      path: karabiner
 
 - create:
     - ~/.vim/undo-dir
     - ~/.zsh
+    - ~/.local/bin
 
 - shell:
+    - command: ./scripts/install-packages.sh
+      description: Installing packages and setting zsh as default shell
+      stdin: true
+      stdout: true
+      stderr: true
     - command: chmod 755 ~/.vim/undo-dir ~/.zsh
     - [git submodule update --init --recursive, installing submodules]
-
